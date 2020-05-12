@@ -1,19 +1,18 @@
 package com.everis.base.runner;
 
-import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.chrome.ChromeDriverService;
 
 /**
  * @author jovallep
  */
-@RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features", glue = "com.everis.base",
-        plugin = {"de.monochromata.cucumber.report.PrettyReports:target/cucumber",
-                "pretty", "json:target/cucumber-reports/Cucumber.json"},
-        strict = true)
+@RunWith(CucumberWithSerenity.class)
+@CucumberOptions(features = "src/test/resources/features",
+        glue = "com.everis.base", strict = true)
 public class baseTest {
 
     public static String ANSI_GREEN = "\u001B[32m";
@@ -33,6 +32,7 @@ public class baseTest {
 
     @BeforeClass
     public static void messages() {
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
         System.out.println(ANSI_GREEN + EVERIS_WELCOME + ANSI_GREEN);
     }
 

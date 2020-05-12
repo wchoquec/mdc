@@ -10,5 +10,6 @@
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
     </root>
+    <pattern>%-5level - %replace(%msg){'[\r\n]', ''}%n</pattern>
 
 </configuration>
