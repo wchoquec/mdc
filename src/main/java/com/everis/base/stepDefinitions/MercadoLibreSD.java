@@ -50,7 +50,6 @@ public class MercadoLibreSD {
     @Then("escribe clave de usuario {string}")
     public void escribe_clave_de_usuario(String var) {
         mercadoLibreSteps.writePassword(var);
-
     }
 
     @Given("que Jesus acceda a la web de Mercadolibre")
@@ -67,4 +66,6 @@ public class MercadoLibreSD {
     public void validaSusDatos() {
 
     }
+
+
 }

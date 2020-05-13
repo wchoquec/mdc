@@ -1,4 +1,4 @@
-<configuration>
+<configuration debug="false">
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>
@@ -6,10 +6,7 @@
             </pattern>
         </encoder>
     </appender>
-
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
     </root>
-    <pattern>%-5level - %replace(%msg){'[\r\n]', ''}%n</pattern>
-
 </configuration>
