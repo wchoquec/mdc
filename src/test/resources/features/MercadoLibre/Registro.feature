@@ -1,6 +1,7 @@
+@web
 Feature: Registro en Mercado Libre
 
-  @Single
+  @imperativo
   Scenario: Cliente ingresa su información 1
     Given que Cesar acceda a la web de Mercadolibre
     When selecciona crear cuenta
@@ -9,7 +10,7 @@ Feature: Registro en Mercado Libre
     And escribe email de usuario "cgutierrez@yopmail.com"
     Then escribe clave de usuario "123456"
 
-  @Multiple
+  @declarativo
   Scenario: Cliente ingresa su información 2
     Given que Jesus acceda a la web de Mercadolibre
     When ingresa sus datos de registro

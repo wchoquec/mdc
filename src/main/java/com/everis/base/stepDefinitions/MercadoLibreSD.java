@@ -26,7 +26,6 @@ public class MercadoLibreSD {
 
     @When("selecciona crear cuenta")
     public void selecciona_crear_cuenta() {
-
         mercadoLibreSteps.selectAccountCreation();
     }
 
