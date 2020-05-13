@@ -17,8 +17,12 @@ Realizar la ejecución de los siguientes comandos:
 
 ```
 mvn clean            # Clean project
-mvn test             # Build & run tests
-mvn verify           # Build, run tests and run static code validation
+mvn test             # Build & run tests (no integration test)
+mvn verify           # Build, run integration test and run static code validation
+
+# Use this for tag execution
+mvn clean verify -Dcucumber.filter.tags=@web
+
 ```
 
 ## Built With
@@ -29,7 +33,9 @@ El proyecto usa las siguientes librerias para el Build y Test:
 * [Spotbugs](https://find-sec-bugs.github.io/bugs.htm) - Analizador de seguridad en código
 
 ## Authors
-* *EVERIS PERU*  - **Jesus Ovalle Porras**
+**EVERIS PERU**  
+ *Jesus Ovalle Porras*
+
 
 ## License
 
