@@ -18,7 +18,7 @@ public class NetflixSD {
     private static final Logger logger = LoggerFactory.getLogger(NetflixSD.class);
 
     @Steps
-    NetflixService servicioStatus;
+    NetflixService netflixService;
 
     @Given("que la aplicación esta operativa")
     public void queLaAplicaciónEstaOperativa() {
@@ -27,18 +27,24 @@ public class NetflixSD {
 
     @When("obtiene la lista: {int} de clientes suscritos")
     public void obtieneLaListaDeClientesSuscritos(int page) {
-        servicioStatus.listUser(page);
+        netflixService.listUser(page);
     }
 
     @When("obtiene al cliente: {int} suscrito")
     public void obtieneAlClienteSuscrito(int user) {
-        servicioStatus.getUSer(user);
+        netflixService.getUSer(user);
     }
 
     @Then("valida que la respuesta es {int}")
     public void buscaAlCliente(int i) {
-        restAssuredThat(servicioStatus.statusCode(i));
+
+        restAssuredThat(netflixService.statusCode(i));
     }
 
 
+    @Then("valida que el correo es {string}")
+    public void validaQueElCorreoEs(String var) {
+        restAssuredThat(netflixService.bodyContent(var));
+
+    }
 }

@@ -12,4 +12,9 @@ Feature: Apis de Netflix para consumo masivo
     When obtiene al cliente: 23 suscrito
     Then valida que la respuesta es 404
 
+  @only
+  Scenario: Operador valida su correo
+    Given que la aplicación esta operativa
+    When obtiene al cliente: 2 suscrito
+    Then valida que el correo es "janet.weaver@reqres.in"
 

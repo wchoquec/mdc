@@ -29,6 +29,8 @@ mvn clean verify -Dcucumber.filter.tags=@web
 El proyecto usa las siguientes librerias para el Build y Test:
 
 * [Maven](https://maven.apache.org/) - Gestor de dependencias
+* [RestAssured](https://github.com/rest-assured/rest-assured/wiki/Usage) - Test API REST
+* [SerenityBDD](http://www.thucydides.info/docs/serenity/#first-steps) - Librería SerenityBDD 
 * [PMD](https://pmd.github.io/latest/pmd_rules_java.html) - Analizador de código estático
 * [Spotbugs](https://find-sec-bugs.github.io/bugs.htm) - Analizador de seguridad en código
 
