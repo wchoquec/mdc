@@ -1,4 +1,4 @@
-package com.everis.base.runner;
+package com.everis.base;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
