@@ -14,8 +14,4 @@ public class Usuario {
     private String firstName;
     private String lastName;
     private String email;
-
-    @Value("${usuario.password}")
-    private String clave;
-
 }
