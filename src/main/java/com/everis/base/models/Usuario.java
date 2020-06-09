@@ -2,7 +2,6 @@ package com.everis.base.models;
 
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Value;
 
 /**
  * @author jovallep

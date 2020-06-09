@@ -14,8 +14,6 @@ import org.slf4j.LoggerFactory;
  */
 public class MercadoLibreSD {
 
-    private static final Logger logger = LoggerFactory.getLogger(MercadoLibreSD.class);
-
     @Steps
     MercadoLibreSteps mercadoLibreSteps;
 
@@ -31,7 +29,6 @@ public class MercadoLibreSD {
 
     @And("escribe nombre de usuario {string}")
     public void escribe_nombre_de_usuario(String var) {
-        logger.info("user name is : " + var);
         mercadoLibreSteps.writeName(var);
     }
 
