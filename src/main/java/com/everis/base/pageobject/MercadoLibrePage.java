@@ -12,6 +12,7 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://www.mercadolibre.com.pe/")
 public class MercadoLibrePage extends PageObject {
 
+    
     @FindBy(xpath = "/html/body/header/div/div[1]/nav[2]/a[1]")
     public WebElementFacade btnCrearCuenta;
 
