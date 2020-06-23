@@ -49,7 +49,7 @@ public class MercadoLibreSD {
     }
 
     @Given("que Jesus acceda a la web de Mercadolibre")
-    public void queJesusAccedaALaWebDeMercadolibre() {
+    public void QueJesusAccedaALaWebDeMercadolibre() {
         mercadoLibreSteps.open();
     }
 

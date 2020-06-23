@@ -2,6 +2,7 @@ package com.everis.base.models;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 
 /**
  * @author jovallep

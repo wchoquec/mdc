@@ -147,6 +147,7 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <includeTests>true</includeTests>
                     <linkXRef>false</linkXRef>
                     <sourceEncoding>utf-8</sourceEncoding>
                     <minimumTokens>100</minimumTokens>
