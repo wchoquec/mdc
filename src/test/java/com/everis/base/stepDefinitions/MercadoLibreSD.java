@@ -6,8 +6,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author jovallep
@@ -34,7 +32,6 @@ public class MercadoLibreSD {
 
     @And("escribe apellido de usuario {string}")
     public void escribe_apellido_de_usuario(String var) {
-
         mercadoLibreSteps.writeApellido(var);
     }
 
@@ -62,7 +59,5 @@ public class MercadoLibreSD {
     public void validaSusDatos() {
 
     }
-
-
 
 }

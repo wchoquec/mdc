@@ -1,7 +1,6 @@
 package com.everis.base.steps;
 
 import com.everis.base.pageobject.MercadoLibrePage;
-import com.everis.base.stepDefinitions.MercadoLibreSD;
 import net.thucydides.core.annotations.Step;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,9 +18,9 @@ public class MercadoLibreSteps {
     public void crearCliente() {
         LOGGER.info("Ingresa la información del cliente");
         selectAccountCreation();
-        writeName("111");
-        writeApellido("111");
-        writeEmail("asd@asd.com");
+        writeName("Raul");
+        writeApellido("Lopez");
+        writeEmail("asd@hotmail.com");
         writePassword("123456");
     }
 
@@ -31,7 +30,6 @@ public class MercadoLibreSteps {
     }
 
     public void selectAccountCreation() {
-
         LOGGER.info("Selecciona el boton Crear Cuenta");
         page.btnCrearCuenta.click();
     }
@@ -39,21 +37,25 @@ public class MercadoLibreSteps {
     public void writeName(String var) {
         LOGGER.info("Escribe el Nombre");
         page.textoNombre.sendKeys(var);
+        LOGGER.info("termino de escribir el nombre");
     }
 
     public void writeApellido(String var) {
         LOGGER.info("Escribe el Apellido");
         page.textoApellido.sendKeys(var);
+        LOGGER.info("termino de escribir el apellido");
     }
 
     public void writeEmail(String var) {
         LOGGER.info("Escribe el Correo");
         page.textoCorreo.sendKeys(var);
+        LOGGER.info("termino de escribir el email");
     }
 
     public void writePassword(String var) {
         LOGGER.info("Escribe el Password");
         page.textoClave.sendKeys(var);
+        LOGGER.info("termino de escribir la clave");
     }
 
 }
