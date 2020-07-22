@@ -43,3 +43,25 @@ Feature: FEATURE DE CAPA WEB SESION 2
     Given que estoy en la web de ibk
     When ingreso texto "Lima"
     And presiono boton Buscar
+
+
+  @Cyber
+  Scenario: Registrarme a CyberWoW
+    Given que estoy en la pagina de cyberWow
+    When ingreso un producto "laptop"
+    And presiono Buscar
+    Then valido resultados
+    And selecciono marca "Core i7"
+    And selecciono segundo elemento
+    Then valido busqueda
+
+  @Walmart
+  Scenario: Registrarme a WALMART
+    Given que estoy en la pagina de cyberWow
+    When ingreso un producto "laptop"
+    And presiono Buscar
+    Then valido resultados
+    And selecciono segundo elemento
+    Then valido busqueda
+    And agregar al carrito
+    Then validar la cantidad
