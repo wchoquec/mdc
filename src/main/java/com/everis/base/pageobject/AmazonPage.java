@@ -16,6 +16,9 @@ public class AmazonPage extends PageObject {
     public WebElementFacade btnLupa;
 
     @FindBy(xpath = "//*[@id=\"search\"]/span/div/span/h1/div/div[1]/div/div/span[1]")
+    public WebElementFacade resultados2;
+
+    @FindBy(xpath = "//*[@id=\"search\"]/span/div/span/h1/div/div[1]/div/div/span[1]")
     public WebElementFacade resultados;
 
     @FindBy(xpath = "//*[@id=\"search\"]/div[1]/div[2]/div/span[3]/div[2]/div[2]/div/span/div/div/div/div/div[2]/div[1]/div/div/span/a/div/img")
