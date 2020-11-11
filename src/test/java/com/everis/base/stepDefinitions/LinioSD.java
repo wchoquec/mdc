@@ -9,26 +9,31 @@ import net.thucydides.core.annotations.Steps;
 public class LinioSD {
 
     @Steps
-    LinioSteps linioSteps;
+    LinioSteps steps;
 
-    @Given("me encuentro en la pagina de Linio")
-    public void meEncuentroEnLaPaginaDeLinio() {
-        linioSteps.open();
+    @Given("abro la pagina de Linio")
+    public void abroLaPaginaDeLinio() {
+        steps.abrirPaginaLinio();
     }
 
-    @When("selecciono el campo de busqueda")
-    public void seleccionoElCampoDeBusqueda() {
-        linioSteps.selecionoCampoTexto();
+    @When("ingreso el dato para la busqueda {string}")
+    public void ingresoElDatoParaLaBusqueda(String var) {
+        steps.ingresarDato(var);
     }
 
-    @And("ingreso el {string} de busqueda")
-    public void ingresoElDeBusqueda(String busqueda) {
-        linioSteps.ingresoTextoBusqueda(busqueda);
+    @And("presiono boton buscar")
+    public void presionoBotonBuscar() {
+        steps.presionarBotonBuscar();
     }
 
-    @And("selcciono el boton de buscar")
-    public void selccionoElBotonDeBuscar() {
-        linioSteps.seleccionoBotonBuscar();
+    @And("selecciono primer elemento")
+    public void seleccionoPrimerElemento() {
+        steps.seleccionarPrimerElemento();
+    }
+
+    @And("presiono boton Agregar al carrito")
+    public void presionoBotonAgregarAlCarrito() {
+        steps.presionarBotonCarrito();
     }
 
 }

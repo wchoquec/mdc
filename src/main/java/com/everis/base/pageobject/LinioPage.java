@@ -8,10 +8,19 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://www.linio.com.pe/")
 public class LinioPage extends PageObject {
 
-    @FindBy(xpath="//*[@id=\"navbar\"]/div[2]/div[2]/div[4]/form/div/div/input")
-    public WebElementFacade inputBuscador;
+    @FindBy(xpath = "/html/body/header/nav/div[2]/div[2]/div[3]/form/div/div/input")
+    public WebElementFacade txtBuscador;
 
-    @FindBy(xpath = "/html/body/header/nav/div[2]/div[2]/div[4]/form/div/div/div/button")
-    public WebElementFacade btnBuscador;
+    @FindBy(xpath = "//*[@id=\"navbar\"]/div[2]/div[2]/div[3]/form/div/div/div/button")
+    public WebElementFacade botonBuscar;
+
+    @FindBy(xpath = "//*[@id=\"catalogue-product-container\"]/div[1]/a/div[1]/figure/picture/img")
+    public WebElementFacade primerElemento;
+
+    @FindBy(xpath = "//*[@id=\"buy-now\"]")
+    public WebElementFacade botonCarrito;
+
+    @FindBy(id = "buy-now")
+    public WebElementFacade botonID;
 
 }

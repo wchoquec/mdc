@@ -4,27 +4,34 @@ import com.everis.base.pageobject.LinioPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class LinioSteps {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(LinioSteps.class);
+    LinioPage page;
+    private static final Logger logger = LoggerFactory.getLogger(LinioSteps.class);
 
-    private LinioPage page;
-    public void open() {
-        LOGGER.info("Abro la pagina linio");
+    public void abrirPaginaLinio(){
+        logger.info("abrimos Linio");
         page.open();
     }
 
-    public void selecionoCampoTexto() {
-        LOGGER.info("Selecciono campo de texto");
-        page.inputBuscador.click();
+    public void ingresarDato(String dato){
+        page.txtBuscador.type(dato);
     }
 
-    public void ingresoTextoBusqueda(String busqueda) {
-        LOGGER.info("Ingreso información de busqueda");
-        page.inputBuscador.sendKeys(busqueda);
+    public void presionarBotonBuscar(){
+        page.botonBuscar.click();
+    }
+    public void seleccionarPrimerElemento(){
+        page.primerElemento.waitUntilVisible();
+        page.primerElemento.click();
+    }
+    public void presionarBotonCarrito(){
+        page.botonID.waitUntilVisible();
+        page.botonID.click();
+        page.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        logger.info("success");
     }
 
-    public void seleccionoBotonBuscar() {
-        page.btnBuscador.click();
-    }
 }
