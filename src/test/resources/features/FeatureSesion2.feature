@@ -1,3 +1,0 @@
-Feature: FEATURE DE CAPA WEB SESION 2
-
-

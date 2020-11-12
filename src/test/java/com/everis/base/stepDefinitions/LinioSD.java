@@ -3,6 +3,7 @@ package com.everis.base.stepDefinitions;
 import com.everis.base.steps.LinioSteps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
 
@@ -16,7 +17,7 @@ public class LinioSD {
         steps.abrirPaginaLinio();
     }
 
-    @When("ingreso el dato para la busqueda {string}")
+    @When("ingreso el producto {string} a buscar")
     public void ingresoElDatoParaLaBusqueda(String var) {
         steps.ingresarDato(var);
     }
@@ -25,15 +26,21 @@ public class LinioSD {
     public void presionoBotonBuscar() {
         steps.presionarBotonBuscar();
     }
-
-    @And("selecciono primer elemento")
-    public void seleccionoPrimerElemento() {
+    @Then("valido que exista resultados")
+    public void validarResultados(){
+        steps.validarResultados();
+    }
+    @When("selecciono el primer producto")
+    public void seleccionoPrimerElemento(){
         steps.seleccionarPrimerElemento();
     }
-
-    @And("presiono boton Agregar al carrito")
-    public void presionoBotonAgregarAlCarrito() {
-        steps.presionarBotonCarrito();
+    @And("selecciono el boton añadir al carrito")
+    public void seleccionoBotonAñadirCarrito(){
+        steps.seleccionarBotonAñadir();
+    }
+    @And("valido que se agregue")
+    public void validarMensaje(){
+        steps.validarMensaje();
     }
 
 }
